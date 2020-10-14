@@ -157,7 +157,7 @@ print('Config:', config)
 
 ## Load input image
 image = get_image(args.image,
-                  transform=get_transform(config['image_size']),
+                  transform=get_transform(config['image_size'], mode='test'),
                   A_transform=None,
                   centre_crop=True)
 image = image.unsqueeze(0).cuda()
