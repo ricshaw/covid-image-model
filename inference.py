@@ -190,8 +190,8 @@ for fold in range(FOLDS):
         else:
             out = model(image)
         out = torch.sigmoid(out)
-        print('Fold %d:' % fold, out.cpu().numpy())
-        pred += out.cpu().numpy()
+        print('Fold %d:' % fold, out.item())
+        pred += out.item()
 
 pred /= FOLDS
 print('Prediction:', pred)
